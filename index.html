@@ -3,103 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guido Biosca - Portafolio</title>
+  <title>Guido Biosca - Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #1a202c;
+      color: #f7fafc;
+    }
+    .hero-bg {
+      background: linear-gradient(to right, #2b6cb0, #3182ce, #63b3ed);
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body>
   <!-- Navbar -->
-  <nav class="bg-gray-800 fixed w-full top-0 z-10 shadow-lg">
-    <div class="container mx-auto flex items-center justify-between px-4 py-3">
-      <h1 class="text-lg font-bold">Guido Biosca</h1>
+  <nav class="bg-gray-800 fixed w-full z-10 shadow-md">
+    <div class="container mx-auto flex justify-between items-center px-4 py-3">
+      <h1 class="text-2xl font-bold">Guido Biosca</h1>
       <div>
-        <a href="#about" class="px-3 py-2 hover:text-gray-400">Sobre mí</a>
-        <a href="#projects" class="px-3 py-2 hover:text-gray-400">Proyectos</a>
-        <a href="#skills" class="px-3 py-2 hover:text-gray-400">Habilidades</a>
-        <a href="#contact" class="px-3 py-2 hover:text-gray-400">Contacto</a>
+        <a href="#about" class="px-3 py-2 hover:text-blue-400">About</a>
+        <a href="#projects" class="px-3 py-2 hover:text-blue-400">Projects</a>
+        <a href="#skills" class="px-3 py-2 hover:text-blue-400">Skills</a>
+        <a href="#contact" class="px-3 py-2 hover:text-blue-400">Contact</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <header class="h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('https://via.placeholder.com/1920x1080');">
-    <div class="text-center">
-      <h1 class="text-5xl font-bold mb-4">Hola, soy Guido</h1>
-      <p class="text-lg mb-6">Ingeniero en Informática - Especialista en Machine Learning y Criptomonedas</p>
-      <a href="#contact" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded">
-        Contáctame
-      </a>
+  <header class="hero-bg h-screen flex items-center justify-center text-center">
+    <div data-aos="fade-up">
+      <h1 class="text-6xl font-extrabold mb-4">Hello, I'm Guido Biosca</h1>
+      <p class="text-xl mb-6">3rd-year Computer Engineering Student at UPC | Data Scientist Intern | Blockchain Enthusiast</p>
+      <a href="#contact" class="bg-white text-gray-900 px-6 py-3 rounded shadow hover:bg-gray-200">Contact Me</a>
     </div>
   </header>
 
-  <!-- Sobre mí -->
+  <!-- About Section -->
   <section id="about" class="container mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold text-center mb-8">Sobre mí</h2>
-    <div class="flex flex-col md:flex-row items-center">
-      <img src="https://via.placeholder.com/300" alt="Guido Biosca" class="rounded-full w-48 h-48 mb-6 md:mb-0 md:mr-6">
-      <p class="text-lg leading-relaxed text-gray-300">
-        Soy un ingeniero en informática apasionado por las matemáticas, el aprendizaje automático y el análisis de tendencias en criptomonedas. Me encanta crear soluciones que combinan algoritmos avanzados con interfaces intuitivas.
-      </p>
+    <h2 class="text-4xl font-bold text-center mb-8" data-aos="fade-right">About Me</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+      <div data-aos="fade-up">
+        <p class="text-lg leading-relaxed">
+          I am a passionate computer engineering student at the Polytechnic University of Catalonia (UPC), currently in my third year. Ever since childhood, technology has been a major part of my life. At the age of 10, I built my first computer using second-hand parts, which marked the beginning of my journey into the world of technology.
+        </p>
+        <p class="text-lg leading-relaxed mt-4">
+          During high school, I conducted research on cryptocurrencies and wrote a thesis titled <a href="cryptocurrency_thesis.pdf" class="text-blue-400 hover:underline">"Cryptocurrencies and Blockchain"</a>, which opened my eyes to the potential of blockchain, trading, and automation.
+        </p>
+      </div>
+      <img src="https://via.placeholder.com/400" alt="Guido Biosca" class="rounded shadow" data-aos="fade-left">
     </div>
   </section>
 
-  <!-- Proyectos -->
+  <!-- Projects Section -->
   <section id="projects" class="bg-gray-800 py-16">
     <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-8">Proyectos</h2>
+      <h2 class="text-4xl font-bold text-center mb-8" data-aos="fade-up">Projects</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-gray-700 rounded-lg shadow-lg p-4">
-          <img src="https://via.placeholder.com/400" alt="Project 1" class="rounded mb-4">
-          <h3 class="text-xl font-semibold">Proyecto 1</h3>
-          <p class="text-gray-400">Descripción breve del proyecto y las tecnologías usadas.</p>
-          <a href="#" class="text-blue-400 hover:underline">Ver más</a>
+        <div class="bg-gray-700 p-4 rounded shadow-lg" data-aos="zoom-in">
+          <h3 class="text-xl font-bold">Fall Detection System</h3>
+          <p class="text-gray-300 mt-2">
+            Developed machine learning models to detect elderly falls using accelerometer and gyroscope data. Leveraged TensorFlow and PyQt5 for data collection and processing.
+          </p>
         </div>
-        <div class="bg-gray-700 rounded-lg shadow-lg p-4">
-          <img src="https://via.placeholder.com/400" alt="Project 2" class="rounded mb-4">
-          <h3 class="text-xl font-semibold">Proyecto 2</h3>
-          <p class="text-gray-400">Descripción breve del proyecto y las tecnologías usadas.</p>
-          <a href="#" class="text-blue-400 hover:underline">Ver más</a>
+        <div class="bg-gray-700 p-4 rounded shadow-lg" data-aos="zoom-in">
+          <h3 class="text-xl font-bold">Crypto Trend Analysis</h3>
+          <p class="text-gray-300 mt-2">
+            Built a system to analyze cryptocurrency trends by scraping data from Telegram, Reddit, and Twitter, using Python and machine learning for movement predictions.
+          </p>
         </div>
-        <div class="bg-gray-700 rounded-lg shadow-lg p-4">
-          <img src="https://via.placeholder.com/400" alt="Project 3" class="rounded mb-4">
-          <h3 class="text-xl font-semibold">Proyecto 3</h3>
-          <p class="text-gray-400">Descripción breve del proyecto y las tecnologías usadas.</p>
-          <a href="#" class="text-blue-400 hover:underline">Ver más</a>
+        <div class="bg-gray-700 p-4 rounded shadow-lg" data-aos="zoom-in">
+          <h3 class="text-xl font-bold">E-commerce Store</h3>
+          <p class="text-gray-300 mt-2">
+            Operated a profitable online store, gaining experience in Facebook Ads, metrics analysis, and performance optimization.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Habilidades -->
+  <!-- Skills Section -->
   <section id="skills" class="container mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold text-center mb-8">Habilidades</h2>
+    <h2 class="text-4xl font-bold text-center mb-8" data-aos="fade-right">Skills</h2>
     <div class="flex flex-wrap justify-center gap-6">
-      <div class="bg-gray-700 rounded-full px-6 py-2">Python</div>
-      <div class="bg-gray-700 rounded-full px-6 py-2">Java</div>
-      <div class="bg-gray-700 rounded-full px-6 py-2">Machine Learning</div>
-      <div class="bg-gray-700 rounded-full px-6 py-2">Kotlin</div>
-      <div class="bg-gray-700 rounded-full px-6 py-2">JavaScript</div>
+      <div class="bg-gray-700 rounded-full px-6 py-2" data-aos="flip-up">Python</div>
+      <div class="bg-gray-700 rounded-full px-6 py-2" data-aos="flip-up">TensorFlow</div>
+      <div class="bg-gray-700 rounded-full px-6 py-2" data-aos="flip-up">Docker</div>
+      <div class="bg-gray-700 rounded-full px-6 py-2" data-aos="flip-up">PyQt5</div>
+      <div class="bg-gray-700 rounded-full px-6 py-2" data-aos="flip-up">Machine Learning</div>
+      <div class="bg-gray-700 rounded-full px-6 py-2" data-aos="flip-up">Data Analysis</div>
     </div>
   </section>
 
-  <!-- Contacto -->
+  <!-- Contact Section -->
   <section id="contact" class="bg-gray-800 py-16">
     <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-8">Contacto</h2>
-      <form class="max-w-lg mx-auto">
-        <input type="text" placeholder="Tu nombre" class="w-full p-4 mb-4 rounded bg-gray-700 text-white">
-        <input type="email" placeholder="Tu correo" class="w-full p-4 mb-4 rounded bg-gray-700 text-white">
-        <textarea placeholder="Tu mensaje" class="w-full p-4 mb-4 rounded bg-gray-700 text-white"></textarea>
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded w-full">
-          Enviar
-        </button>
+      <h2 class="text-4xl font-bold text-center mb-8" data-aos="fade-up">Contact Me</h2>
+      <form class="max-w-lg mx-auto" data-aos="fade-in">
+        <input type="text" placeholder="Your Name" class="w-full p-4 mb-4 rounded bg-gray-700 text-white">
+        <input type="email" placeholder="Your Email" class="w-full p-4 mb-4 rounded bg-gray-700 text-white">
+        <textarea placeholder="Your Message" class="w-full p-4 mb-4 rounded bg-gray-700 text-white"></textarea>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded w-full">Send</button>
       </form>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-center py-6">
-    <p class="text-gray-400">&copy; 2025 Guido Biosca. Todos los derechos reservados.</p>
+    <p class="text-gray-400">&copy; 2025 Guido Biosca. All rights reserved.</p>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+    });
+  </script>
 </body>
 </html>
 
