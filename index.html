@@ -1,124 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="styles.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guido Biosca - Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <style>
     body {
       font-family: 'Inter', sans-serif;
       background-color: #1a202c;
       color: #f7fafc;
+      margin: 0;
     }
     .hero-bg {
-      background: linear-gradient(to right, #2b6cb0, #3182ce, #63b3ed);
+      position: relative;
+      overflow: hidden;
+    }
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 20px;
+    }
+    .rounded-btn {
+      background: linear-gradient(145deg, #3182ce, #63b3ed);
+      padding: 10px 20px;
+      color: white;
+      border-radius: 25px;
+      text-align: center;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .rounded-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(50, 150, 250, 0.4);
+    }
+    section {
+      position: relative;
+    }
+    .anchor-point {
+      position: absolute;
+      top: -100px; /* Adjust for fixed navbar */
+      height: 0;
+      visibility: hidden;
     }
   </style>
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="bg-gray-800 fixed w-full z-10 shadow-md">
-    <div class="container mx-auto flex justify-between items-center px-4 py-3">
-      <h1 class="text-2xl font-bold">Guido Biosca</h1>
+  <nav class="bg-gray-800 fixed w-full z-10 shadow-md rounded-b-xl">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-3xl font-bold">Guido Biosca</h1>
       <div>
-        <a href="#about" class="px-3 py-2 hover:text-blue-400">About</a>
-        <a href="#projects" class="px-3 py-2 hover:text-blue-400">Projects</a>
-        <a href="#skills" class="px-3 py-2 hover:text-blue-400">Skills</a>
-        <a href="#contact" class="px-3 py-2 hover:text-blue-400">Contact</a>
+        <a href="#about" class="px-4 py-2 hover:text-blue-400">About</a>
+        <a href="#projects" class="px-4 py-2 hover:text-blue-400">Projects</a>
+        <a href="#research" class="px-4 py-2 hover:text-blue-400">Research</a>
+        <a href="#skills" class="px-4 py-2 hover:text-blue-400">Skills</a>
+        <a href="#contact" class="px-4 py-2 hover:text-blue-400">Contact</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero-bg h-screen flex items-center justify-center text-center">
-    <div data-aos="fade-up">
+  <header class="hero-bg h-screen flex items-center justify-center">
+    <div id="particles-js"></div>
+    <div class="hero-content">
       <h1 class="text-6xl font-extrabold mb-4">Hello, I'm Guido Biosca</h1>
-      <p class="text-xl mb-6">3rd-year Computer Engineering Student at UPC | Data Scientist Intern | Blockchain Enthusiast</p>
-      <a href="#contact" class="bg-white text-gray-900 px-6 py-3 rounded shadow hover:bg-gray-200">Contact Me</a>
+      <p class="text-2xl mb-6">Passionate Computer Engineer Student | Data Scientist | Blockchain Innovator</p>
+      <a href="#contact" class="rounded-btn">Get in Touch</a>
     </div>
   </header>
 
   <!-- About Section -->
-  <section id="about" class="container mx-auto px-6 py-16">
-    <h2 class="text-4xl font-bold text-center mb-8" data-aos="fade-right">About Me</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+  <section id="about" class="container mx-auto px-8 py-20">
+    <div class="anchor-point" id="about-anchor"></div>
+    <h2 class="text-5xl font-bold text-center mb-12" data-aos="fade-right">About Me</h2>
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <img src="foto.webp" alt="Guido Biosca" class="rounded-full shadow-lg" data-aos="fade-left">
       <div data-aos="fade-up">
         <p class="text-lg leading-relaxed">
-          I am a passionate computer engineering student at the Polytechnic University of Catalonia (UPC), currently in my third year. Ever since childhood, technology has been a major part of my life. At the age of 10, I built my first computer using second-hand parts, which marked the beginning of my journey into the world of technology.
+          I am a 3rd-year Computer Engineering student at the Polytechnic University of Catalonia (UPC). My passion lies in combining technology and innovation to solve real-world problems. During my internship at Air-Fi, I developed machine learning models using TensorFlow to detect falls in elderly people based on accelerometer and gyroscope data. Additionally, I created PyQt5 applications to improve data collection and automated operations using Docker.
         </p>
         <p class="text-lg leading-relaxed mt-4">
-          During high school, I conducted research on cryptocurrencies and wrote a thesis titled <a href="cryptocurrency_thesis.pdf" class="text-blue-400 hover:underline">"Cryptocurrencies and Blockchain"</a>, which opened my eyes to the potential of blockchain, trading, and automation.
+          Currently, I am working on a personal project focused on cryptocurrency trend analysis. By collecting data from Telegram, Reddit, and Twitter, I employ advanced machine learning algorithms to predict market movements and identify promising opportunities in the blockchain space.
         </p>
       </div>
-      <img src="https://via.placeholder.com/400" alt="Guido Biosca" class="rounded shadow" data-aos="fade-left">
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="bg-gray-800 py-16">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-8" data-aos="fade-up">Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-gray-700 p-4 rounded shadow-lg" data-aos="zoom-in">
-          <h3 class="text-xl font-bold">Fall Detection System</h3>
-          <p class="text-gray-300 mt-2">
-            Developed machine learning models to detect elderly falls using accelerometer and gyroscope data. Leveraged TensorFlow and PyQt5 for data collection and processing.
-          </p>
-        </div>
-        <div class="bg-gray-700 p-4 rounded shadow-lg" data-aos="zoom-in">
-          <h3 class="text-xl font-bold">Crypto Trend Analysis</h3>
-          <p class="text-gray-300 mt-2">
-            Built a system to analyze cryptocurrency trends by scraping data from Telegram, Reddit, and Twitter, using Python and machine learning for movement predictions.
-          </p>
-        </div>
-        <div class="bg-gray-700 p-4 rounded shadow-lg" data-aos="zoom-in">
-          <h3 class="text-xl font-bold">E-commerce Store</h3>
-          <p class="text-gray-300 mt-2">
-            Operated a profitable online store, gaining experience in Facebook Ads, metrics analysis, and performance optimization.
-          </p>
+  <section id="projects" class="bg-gray-800 py-20">
+  <div class="container mx-auto px-8">
+    <h2 class="text-5xl font-bold text-center mb-12" data-aos="fade-up">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div class="card p-6 relative group" data-aos="flip-left">
+        <h3 class="text-xl font-bold">Fall Detection System</h3>
+        <p class="text-gray-300 mt-2">
+          Machine learning models for fall detection in elderly people. Leveraged TensorFlow, PyQt5, and Docker.
+        </p>
+        <div class="absolute inset-0 bg-blue-500 opacity-0 group-hover:opacity-75 transition duration-300">
+          <a href="fall-detection.html" class="block w-full h-full flex justify-center items-center text-white font-bold">View Details</a>
         </div>
       </div>
+      <div class="card p-6 relative group" data-aos="flip-left">
+        <h3 class="text-xl font-bold">Crypto Trend Analysis</h3>
+        <p class="text-gray-300 mt-2">
+          A system to analyze and predict cryptocurrency trends by scraping data from Telegram, Reddit, and Twitter.
+        </p>
+        <div class="absolute inset-0 bg-blue-500 opacity-0 group-hover:opacity-75 transition duration-300">
+          <a href="crypto-trends.html" class="block w-full h-full flex justify-center items-center text-white font-bold">View Details</a>
+        </div>
+      </div>
+      <div class="card p-6 relative group" data-aos="flip-left">
+        <h3 class="text-xl font-bold">E-commerce Store</h3>
+        <p class="text-gray-300 mt-2">
+          Managed an online store, focusing on digital strategies and performance optimization.
+        </p>
+        <div class="absolute inset-0 bg-blue-500 opacity-0 group-hover:opacity-75 transition duration-300">
+          <a href="ecommerce.html" class="block w-full h-full flex justify-center items-center text-white font-bold">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Research Section -->
+  <section id="research" class="container mx-auto px-8 py-20">
+    <div class="anchor-point" id="research-anchor"></div>
+    <h2 class="text-5xl font-bold text-center mb-12" data-aos="fade-right">Research</h2>
+    <div class="card p-6 mx-auto" data-aos="flip-up">
+      <h3 class="text-xl font-bold">Cryptocurrencies and Blockchain</h3>
+      <p class="text-gray-300 mt-2">
+        An in-depth analysis of cryptocurrencies and their impact on blockchain technology. Explored trading automation and blockchain applications.
+      </p>
+      <a href="cryptocurrency_thesis.pdf" target="_blank" class="rounded-btn mt-4 inline-block">Read More</a>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="container mx-auto px-6 py-16">
-    <h2 class="text-4xl font-bold text-center mb-8" data-aos="fade-right">Skills</h2>
+  <section id="skills" class="container mx-auto px-8 py-20">
+    <div class="anchor-point" id="skills-anchor"></div>
+    <h2 class="text-5xl font-bold text-center mb-12" data-aos="fade-right">Skills</h2>
     <div class="flex flex-wrap justify-center gap-6">
-      <div class="bg-gray-700 rounded-full px-6 py-2" data-aos="flip-up">Python</div>
-      <div class="bg-gray-700 rounded-full px-6 py-2" data-aos="flip-up">TensorFlow</div>
-      <div class="bg-gray-700 rounded-full px-6 py-2" data-aos="flip-up">Docker</div>
-      <div class="bg-gray-700 rounded-full px-6 py-2" data-aos="flip-up">PyQt5</div>
-      <div class="bg-gray-700 rounded-full px-6 py-2" data-aos="flip-up">Machine Learning</div>
-      <div class="bg-gray-700 rounded-full px-6 py-2" data-aos="flip-up">Data Analysis</div>
+      <div class="bg-gray-700 rounded-full px-8 py-4 text-white font-bold shadow-lg" data-aos="zoom-in">Python</div>
+      <div class="bg-gray-700 rounded-full px-8 py-4 text-white font-bold shadow-lg" data-aos="zoom-in">TensorFlow</div>
+      <div class="bg-gray-700 rounded-full px-8 py-4 text-white font-bold shadow-lg" data-aos="zoom-in">Docker</div>
+      <div class="bg-gray-700 rounded-full px-8 py-4 text-white font-bold shadow-lg" data-aos="zoom-in">PyQt5</div>
+      <div class="bg-gray-700 rounded-full px-8 py-4 text-white font-bold shadow-lg" data-aos="zoom-in">C++</div>
+      <div class="bg-gray-700 rounded-full px-8 py-4 text-white font-bold shadow-lg" data-aos="zoom-in">C</div>
+      <div class="bg-gray-700 rounded-full px-8 py-4 text-white font-bold shadow-lg" data-aos="zoom-in">Java</div>
+      <div class="bg-gray-700 rounded-full px-8 py-4 text-white font-bold shadow-lg" data-aos="zoom-in">Bot Automation</div>
+      <div class="bg-gray-700 rounded-full px-8 py-4 text-white font-bold shadow-lg" data-aos="zoom-in">Machine Learning</div>
+      <div class="bg-gray-700 rounded-full px-8 py-4 text-white font-bold shadow-lg" data-aos="zoom-in">Data Analysis</div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="bg-gray-800 py-16">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-8" data-aos="fade-up">Contact Me</h2>
+  <section id="contact" class="bg-gray-800 py-20">
+    <div class="anchor-point" id="contact-anchor"></div>
+    <div class="container mx-auto px-8">
+      <h2 class="text-5xl font-bold text-center mb-12" data-aos="fade-up">Contact Me</h2>
       <form class="max-w-lg mx-auto" data-aos="fade-in">
-        <input type="text" placeholder="Your Name" class="w-full p-4 mb-4 rounded bg-gray-700 text-white">
-        <input type="email" placeholder="Your Email" class="w-full p-4 mb-4 rounded bg-gray-700 text-white">
-        <textarea placeholder="Your Message" class="w-full p-4 mb-4 rounded bg-gray-700 text-white"></textarea>
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded w-full">Send</button>
+        <input type="text" placeholder="Your Name" class="w-full p-4 mb-6 rounded bg-gray-700 text-white shadow-lg">
+        <input type="email" placeholder="Your Email" class="w-full p-4 mb-6 rounded bg-gray-700 text-white shadow-lg">
+        <textarea placeholder="Your Message" class="w-full p-4 mb-6 rounded bg-gray-700 text-white shadow-lg"></textarea>
+        <button class="rounded-btn w-full">Send</button>
       </form>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-center py-6">
+  <footer class="bg-gray-900 text-center py-6 rounded-t-xl">
     <p class="text-gray-400">&copy; 2025 Guido Biosca. All rights reserved.</p>
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     AOS.init({
-      duration: 1000,
+      duration: 1200,
     });
+
+    particlesJS.load('particles-js', 'https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/demo/particles.json');
+
+    function scrollToSection(id) {
+      const section = document.getElementById(id + '-anchor');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   </script>
 </body>
 </html>
