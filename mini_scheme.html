@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Details about the Mini Scheme Interpreter project using Python and ANTLR.">
+  <title>Mini Scheme Interpreter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1a202c; /* Dark background */
+      color: #f7fafc; /* Light text */
+    }
+    .divider {
+      height: 2px;
+      background: linear-gradient(to right, #4299e1, #63b3ed);
+    }
+  </style>
+</head>
+<body class="antialiased font-sans">
+
+  <!-- Header -->
+  <header class="bg-gray-800 py-6 shadow-lg">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold text-white hover:text-blue-400 transition">
+        Guido Biosca
+      </a>
+      <nav class="space-x-4">
+        <a href="index.html" class="text-white hover:text-blue-400 transition">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Project Details -->
+  <section class="container mx-auto px-6 py-16">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-extrabold text-white mb-4">Mini Scheme Interpreter</h1>
+      <p class="text-lg text-gray-400">
+        Developed using Python and ANTLR as a part of a functional programming project.
+      </p>
+    </div>
+
+    <!-- Introduction -->
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold text-white mb-4">Overview</h2>
+      <p class="text-gray-300 leading-relaxed">
+        This project implements an interpreter for a simplified version of the Scheme language, derived from Lisp. It supports key features such as basic arithmetic operations, function definitions, list management, and control structures. The interpreter is built using Python and ANTLR, providing a robust foundation for functional programming exploration.
+      </p>
+    </div>
+
+    <!-- Key Features -->
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold text-white mb-4">Key Features</h2>
+      <ul class="list-disc pl-6 text-gray-300">
+        <li><strong>Basic Operations:</strong> Arithmetic, logical, and relational operations.</li>
+        <li><strong>Function and Constant Definitions:</strong> Support for global function definitions and immutable constants.</li>
+        <li><strong>List Management:</strong> Operations like <code>car</code>, <code>cdr</code>, <code>cons</code>, and <code>null?</code>.</li>
+        <li><strong>Control Structures:</strong> Simple and multiple conditionals with <code>if</code> and <code>cond</code>.</li>
+        <li><strong>Input and Output:</strong> Functions like <code>read</code>, <code>display</code>, and <code>newline</code>.</li>
+        <li><strong>Local Variables:</strong> Support for local declarations using <code>let</code>.</li>
+        <li><strong>Recursion:</strong> Implementation of recursive functions.</li>
+      </ul>
+    </div>
+
+    <!-- Implementation Details -->
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold text-white mb-4">Implementation Details</h2>
+      <p class="text-gray-300 leading-relaxed">
+        The interpreter leverages Python and ANTLR for parsing and executing Scheme expressions. Key components include:
+      </p>
+      <ul class="list-disc pl-6 text-gray-300">
+        <li><strong>Function:</strong> Represents user-defined functions with parameters and body.</li>
+        <li><strong>Environment:</strong> Manages scopes for variables and functions.</li>
+        <li><strong>EvalVisitor:</strong> Core evaluator for traversing the syntax tree and executing expressions.</li>
+      </ul>
+      <p class="text-gray-300 leading-relaxed mt-4">
+        The system supports nested expressions, recursive calls, and robust error handling, ensuring accurate execution of Scheme programs.
+      </p>
+    </div>
+
+    <!-- Grammar -->
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold text-white mb-4">Grammar</h2>
+      <pre class="bg-gray-800 text-gray-300 rounded-lg p-4 overflow-x-auto">
+<code>grammar scheme;
+
+root : expr* EOF;
+
+expr
+    : ( ''(' | '(' ) expr* ')' #expression
+    | BOOLEAN #bool
+    | NUMBER #num
+    | IDENTIFIER #id
+    | OPERATOR #op
+    | STRING #str
+    ;
+
+OPERATOR: '+'|'-'|'*'|'/'|'<'|'>'|'='|'<='|'>='|'and'|'or'|'not'|'mod';
+IDENTIFIER: [a-zA-Z][a-zA-Z0-9\-]* '?'?;
+NUMBER : '-'? [0-9]+ ;
+BOOLEAN : '#t' | '#f';
+STRING : '"' .*? '"';
+WS  : [ \t\n]+ -> skip;
+COMMENT: ';' .*? '\n' -> skip;
+</code>
+      </pre>
+    </div>
+
+    <!-- Links -->
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold text-white mb-4">Explore More</h2>
+      <ul class="list-disc pl-6 text-gray-300">
+        <li><a href="https://github.com/BioscaG/mini-scheme" class="text-blue-400 hover:text-blue-300 transition" target="_blank">GitHub Repository</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-6">
+    <div class="container mx-auto px-6 text-center text-gray-400">
+      <p>&copy; 2025 Guido Biosca. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+

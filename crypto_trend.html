@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Details about the Crypto Trend Analysis project, focused on predicting cryptocurrency trends using social media and news data.">
+  <title>Crypto Trend Analysis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1a202c; /* Dark background */
+      color: #f7fafc; /* Light text */
+    }
+    .divider {
+      height: 2px;
+      background: linear-gradient(to right, #4299e1, #63b3ed);
+    }
+  </style>
+</head>
+<body class="antialiased font-sans">
+
+  <!-- Header -->
+  <header class="bg-gray-800 py-6 shadow-lg">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold text-white hover:text-blue-400 transition">
+        Guido Biosca
+      </a>
+      <nav class="space-x-4">
+        <a href="index.html" class="text-white hover:text-blue-400 transition">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Project Details -->
+  <section class="container mx-auto px-6 py-16">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-extrabold text-white mb-4">Crypto Trend Analysis</h1>
+      <p class="text-lg text-gray-400">
+        Harnessing the power of data to predict cryptocurrency trends through social media and news analysis.
+      </p>
+    </div>
+
+    <!-- Introduction -->
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold text-white mb-4">Overview</h2>
+      <p class="text-gray-300 leading-relaxed">
+        In today's fast-paced cryptocurrency market, prices often move rapidly in response to news, social media trends, and influencer opinions. The ability to identify emerging trends before they fully materialize can provide a significant edge. This project aims to develop a comprehensive system for collecting, analyzing, and predicting market trends by leveraging data from various sources such as Twitter, Reddit, Telegram, and financial news platforms.
+      </p>
+    </div>
+
+    <!-- Key Features -->
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold text-white mb-4">Key Features</h2>
+      <ul class="list-disc pl-6 text-gray-300">
+        <li><strong>Massive Data Collection:</strong> Real-time scraping of social media, news, and forums to gather high-quality data.</li>
+        <li><strong>Sentiment Analysis:</strong> Natural Language Processing (NLP) to classify and quantify sentiment trends in posts and articles.</li>
+        <li><strong>Trend Detection:</strong> Algorithms to identify patterns and emerging discussions in the crypto space.</li>
+        <li><strong>Market Impact Prediction:</strong> Models to correlate online activity with cryptocurrency price movements.</li>
+        <li><strong>Visualization Dashboard:</strong> Intuitive graphs and reports to display insights and predictions.</li>
+      </ul>
+    </div>
+
+    <!-- Implementation Details -->
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold text-white mb-4">Implementation Details</h2>
+      <p class="text-gray-300 leading-relaxed">
+        The system is built using a combination of Python for data processing, machine learning for prediction, and cloud technologies for scalability. The key components include:
+      </p>
+      <ul class="list-disc pl-6 text-gray-300">
+        <li><strong>Data Scraping Pipelines:</strong> Tools like Tweepy, Reddit API, and BeautifulSoup for fetching data.</li>
+        <li><strong>Natural Language Processing:</strong> Libraries like SpaCy and Transformers to analyze sentiment and extract keywords.</li>
+        <li><strong>Machine Learning Models:</strong> Algorithms such as LSTMs and Random Forests for trend prediction.</li>
+        <li><strong>Database Management:</strong> NoSQL databases like MongoDB for storing unstructured data.</li>
+        <li><strong>Visualization:</strong> Dashboards created using Plotly and Streamlit for interactive data exploration.</li>
+      </ul>
+      <p class="text-gray-300 leading-relaxed mt-4">
+        These components work together to process massive amounts of data efficiently, enabling accurate and timely predictions.
+      </p>
+    </div>
+
+    <!-- Challenges and Solutions -->
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold text-white mb-4">Challenges and Solutions</h2>
+      <ul class="list-disc pl-6 text-gray-300">
+        <li><strong>Data Noise:</strong> Filtering irrelevant or low-quality content using advanced text preprocessing techniques.</li>
+        <li><strong>Real-time Analysis:</strong> Employing streaming frameworks like Apache Kafka to process incoming data streams.</li>
+        <li><strong>Scalability:</strong> Leveraging cloud services like AWS Lambda for dynamic scaling.</li>
+        <li><strong>Correlation Complexity:</strong> Using feature engineering to identify meaningful correlations between online activity and market movements.</li>
+      </ul>
+    </div>
+
+    <!-- Applications and Future Work -->
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold text-white mb-4">Applications and Future Work</h2>
+      <p class="text-gray-300 leading-relaxed">
+        This project has applications in automated trading, portfolio management, and risk assessment. Future plans include:
+      </p>
+      <ul class="list-disc pl-6 text-gray-300">
+        <li>Expanding data sources to include more niche forums and blogs.</li>
+        <li>Improving prediction accuracy using ensemble models.</li>
+        <li>Integrating a real-time alert system for actionable insights.</li>
+        <li>Exploring the use of blockchain-based sentiment tracking for decentralized analysis.</li>
+      </ul>
+    </div>
+
+    <!-- Links -->
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold text-white mb-4">Explore More</h2>
+      <ul class="list-disc pl-6 text-gray-300">
+        <li><a href="https://github.com/BioscaG/crypto-trend-analysis" class="text-blue-400 hover:text-blue-300 transition" target="_blank">GitHub Repository (not updated)</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-6">
+    <div class="container mx-auto px-6 text-center text-gray-400">
+      <p>&copy; 2025 Guido Biosca. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
